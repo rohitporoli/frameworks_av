@@ -286,6 +286,7 @@ status_t SampleTable::setSampleToChunkParams(
 
     for (uint32_t i = 0; i < mNumSampleToChunkOffsets; ++i) {
         uint8_t buffer[sizeof(SampleToChunkEntry)];
+
         if (mDataSource->readAt(
                     mSampleToChunkOffset + 8 + i * sizeof(SampleToChunkEntry),
                     buffer,
